@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        .main {
+            width: 400px;
+            height: 450px;
+            background-color: black;
+            color: white;
+            margin: auto;
+            margin-top: 10rem;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 8px rgb(29, 26, 26);
+        }
+
+        .margin {
+            transform: translateY(100px);
+            display: grid;
+            place-items: center;
+        }
+
+        input {
+            width: 350px;
+            height: 20px;
+            margin: 10px;
+            border: none;
+            outline: none;
+            color: aliceblue;
+            font-size: 20px;
+            background: transparent;
+            border-bottom: 3px solid white;
+        }
+
+        .enter {
+            margin-left: 20px;
+            float: left;
+        }
+
+        .overlay {
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            opacity: -1;
+            color: aqua;
+        }
+
+        .login:hover .overlay {
+            opacity: 1;
+            height: 20px;
+        }
+
+        .button {
+            background-color: aqua;
+            width: 100px;
+            padding: 5px;
+            text-align: center;
+            margin: auto;
+            margin-top: 5rem;
+            border-radius: 6px;
+            color: black;
+        }
+
+        .button a {
+            text-decoration: none;
+            font-size: 20px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        #for {
+            text-decoration: none;
+            font-size: 1rem;
+            float: right;
+            color: aqua;
+        }
+    </style>
+    <link rel="Stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo" id="logo1"><img src="Image/Logo.png"></a>
+        <a href="#" class="logo">Electical Manitenance</a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="#Services">Services</a>
+                <a href="mail.html">Mail Box</a>
+                
+            <a href="index.html">Login</a>
+            <a href="sigup.html">SignUp</a>
+
+        </nav>
+    </header>
+    <div class="main">
+        <div class="margin">
+            <h1>LOGIN</h1>
+            <div class="login">
+                <label class="enter  overlay"> Username</label>
+                <input class="user" id="user" type="text" name="user" required>
+                <br>
+                <br>
+                <label class="enter overlay"> Password</label>
+                <input class="user" id="pass" type="password" name="pass" required>
+                <br>
+                <a href="#" target="_blank" id="for">Forgetpassword?</a>
+                <br>
+                <br>
+                <div class="button">
+                    <a onclick="SUBMIt()">SUBMIT</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function SUBMIt() {
+        var x = document.getElementById('user').value
+        var y = document.getElementById('pass').value
+        if (x == y) {
+            alert("Please Give Me Some Input!")
+        }
+        else {
+            location.href = "index.html"
+        }
+    } 
+</script>
+
+</html>
